@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { FormsModule } from '@angular/forms';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     SidenavComponent,
     MainComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    FirstComponent,
+    SecondComponent
     
   ],
   imports: [
