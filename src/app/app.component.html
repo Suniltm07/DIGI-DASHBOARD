@@ -1,16 +1,31 @@
-<div>
-  <div class="header">
-    <app-header></app-header>
-  </div>
-  <div class="main-body">
-    <div class="side-nav">
-      <app-sidenav></app-sidenav>
+<div class="container">
+  <h2>Attribute Directives -ngClass</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <p [ngClass]="{
+        red: highlightColor === 'red',
+        'green-color': highlightColor === 'green',
+        'blue': highlightColor === 'blue'}">
+      Click any button to highlight me!</p>
     </div>
-    <div class="main">
-      <app-main></app-main>
+    <div class="col-md-12">
+      <button class="btn btn-danger" (click)="highlight('red')">Red</button>
+      <button class="btn btn-sucess" (click)="highlight('green')">green</button>
+      <button class="btn btn-primary" (click)="highlight('blue')">blue</button>
     </div>
   </div>
-  <div class="footer">
-    <app-footer></app-footer>
+  <hr>
+  <h2>Attribute Directives -ng Style</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <p [ngClass]="{
+        color: isStyleApplied === true ? 'white' : 'black',
+        backgroundColor: isStyleApplied ? 'green' : 'white'
+      }">Click the Button to toggle the style!</p>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="toggleStyle()"> Toggle Style</button>
+    </div>
   </div>
 </div>
+
